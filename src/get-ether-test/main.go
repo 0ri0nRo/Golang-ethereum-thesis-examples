@@ -2,8 +2,12 @@ package main
 import (
 	"fmt"
 	"log"	
+	"context"
+    "log"
+	
 	"github.com/ethereum/go-ethereum/ethclient"
-
+    "github.com/ethereum/go-ethereum/common"
+    "github.com/ethereum/go-ethereum/crypto"
 )
 
 var(
@@ -12,7 +16,7 @@ var(
 
 func main(){
 	
-	client, err := ethclient.Dial("")
+	client, err := ethclient.Dial(url)
 	if err != nil {
 		log.Fatal(err)
 	}
