@@ -15,4 +15,8 @@ func main(){
 	}
 	pData := crypto.FromECDSA(pvk)
 	fmt.Println(hexutil.Encode(pData))
+
+	puData := crypto.FromECDSAPub(&pvk.PublicKey)
+	fmt.Println(hexutil.Encode(puData))
+
 }
