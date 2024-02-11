@@ -10,11 +10,19 @@ This guide provides detailed instructions on how to run a Docker image to simula
     ```bash
     docker run -it -v $(pwd):/myapp -p 8080:8080 ghcr.io/edgelesssys/ego-dev
     ```
-
+2. **Install Ethereum and Solc:**
+    - [This link](https://stackoverflow.com/questions/47257800/error-when-installing-ethereum-package-ethereum-has-no-installation-candidate) contains detailed instructions on how to install Ethereum. Summarizing:
+        ```bash
+        sudo apt-get install software-properties-common
+        sudo add-apt-repository -y ppa:ethereum/ethereum
+        sudo apt-get update
+        sudo apt-get install ethereum
+        ```
+    - Next, install `solc` to compile Solidity contracts.
 
 ## Running the Dockerfile from Terminal
 
-Follow these steps to execute the Dockerfile from the terminal:
+Follow these steps if you want to execute the Dockerfile from the terminal:
 
 1. Make sure you have Docker installed on your system. If you haven't installed it yet, you can follow the official instructions to [Install Docker](https://docs.docker.com/get-docker/).
 
@@ -39,16 +47,6 @@ Follow these steps to execute the Dockerfile from the terminal:
 By following these commands, you should be able to build and run the Docker container using the provided Dockerfile. Make sure you have sufficient privileges to execute Docker commands; you may need to use `sudo` if you are not a root user or do not have adequate permissions.
 
 
-
-2. **Install Ethereum and Solc:**
-    - [This link](https://stackoverflow.com/questions/47257800/error-when-installing-ethereum-package-ethereum-has-no-installation-candidate) contains detailed instructions on how to install Ethereum. Summarizing:
-        ```bash
-        sudo apt-get install software-properties-common
-        sudo add-apt-repository -y ppa:ethereum/ethereum
-        sudo apt-get update
-        sudo apt-get install ethereum
-        ```
-    - Next, install `solc` to compile Solidity contracts.
 
 ### Creating the Smart Contract
 
