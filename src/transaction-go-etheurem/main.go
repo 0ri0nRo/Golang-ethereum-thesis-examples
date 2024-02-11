@@ -87,3 +87,7 @@ func main() {
 	}
 	fmt.Printf("tx sent: %s", tx.Hash().Hex())
 }
+
+//SUCCESS TX: 0xc6cf4335673286a7e51e1101cbca47cda261bee5441aaf361b5418598b57192b
+
+// WITH INSUFFICIENT BALANCE: 2024/02/11 15:14:25 replacement transaction underpriced
