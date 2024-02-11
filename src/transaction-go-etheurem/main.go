@@ -14,8 +14,7 @@ import (
 )
 
 var (
-	url  = "https://kovan.infura.io/v3/0c7b3f204f37416388610fb274b0452c"
-	murl = "https://mainnet.infura.io/v3/0c7b3f204f37416388610fb274b0452c"
+	url = "https://sepolia.infura.io/v3/7f0d5493f09941789897ae6ea75788a0"
 )
 
 func main() {
@@ -67,7 +66,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	b, err := ioutil.ReadFile("wallet/UTC--2021-05-24T16-47-26.459903259Z--c393967d7b4b7fd02e697d13085d645c9412af11")
+	b, err := ioutil.ReadFile("wallet/UTC--2024-02-11T11-18-03.210022925Z--c4e5a877a603d740d1baf8d35206707160dc8cce")
 	if err != nil {
 		log.Fatal(err)
 	}
