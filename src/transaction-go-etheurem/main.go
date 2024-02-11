@@ -48,7 +48,23 @@ func main(){
 		log.Fatal(err)
 	}
 
-	types.NewTransaction(nonce, a2, amount, 21000, gasPrice, nil)
+	tx := types.NewTransaction(nonce, a2, amount, 21000, gasPrice, nil)
+	
+	chainID, err := client.NetworkID(context.Background())
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	b, err := ioutil.ReadFile("wallet/UTC--2024-02-11T11-18-03.210022925Z--c4e5a877a603d740d1baf8d35206707160dc8cce")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	keystore.DecryptKey(b, "password")
+	tx, err := types.SignTx(tx, types.NewEIP155Signer(chainID), key.PrivateKey)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 
 }
