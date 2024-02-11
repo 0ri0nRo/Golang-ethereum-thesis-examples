@@ -14,9 +14,9 @@ func main(){
 		log.Fatal(err)
 	}
 	pData := crypto.FromECDSA(pvk)
-	fmt.Println(hexutil.Encode(pData))
+	fmt.Println("Private Key:", hexutil.Encode(pData))
 
 	puData := crypto.FromECDSAPub(&pvk.PublicKey)
-	fmt.Println(hexutil.Encode(puData))
+	fmt.Println("Public Key:", hexutil.Encode(puData))
 
 }
