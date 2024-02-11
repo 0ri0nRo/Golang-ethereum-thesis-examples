@@ -44,6 +44,12 @@ Follow these steps if you want to execute the Dockerfile from the terminal:
 
    Replace `myimage` with the name you gave to the image during the build phase.
 
+5. Save container
+
+```
+docker commit my_container my_new_image:latest
+```
+
 By following these commands, you should be able to build and run the Docker container using the provided Dockerfile. Make sure you have sufficient privileges to execute Docker commands; you may need to use `sudo` if you are not a root user or do not have adequate permissions.
 
 
