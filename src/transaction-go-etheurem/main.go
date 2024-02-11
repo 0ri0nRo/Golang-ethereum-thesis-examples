@@ -66,5 +66,10 @@ func main(){
 		log.Fatal(err)
 	}
 
+	err = client.SendTransaction(context.Background(), tx)
+	if err != nil {
+		log.Fatal(err)
+	}
 
+	fmt.Printf("tx sent: %s", tx.Hash().Hex())
 }
