@@ -17,6 +17,7 @@ func main(){
 	fmt.Println("Private Key:", hexutil.Encode(pData))
 
 	puData := crypto.FromECDSAPub(&pvk.PublicKey)
-	fmt.Println("Public Key:", hexutil.Encode(puData))
+	fmt.Println(hexutil.Encode(puData))
 
+	fmt.Println("Public Key:", crypto.PubkeyToAddress(pvk.PublicKey).Hex())
 }
