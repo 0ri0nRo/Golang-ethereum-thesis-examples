@@ -12,5 +12,7 @@ func main(){
 		log.Fatal(err)
 	}
 	defer cliend.Close()
-	
+	a1 := common.HexToAddress("c4e5a877a603d740d1baf8d35206707160dc8cce")
+	a2 := common.HexToAddress("ada64c03bb8ecb118f71585df729b4ae1b1eb2ef")
+	client.BalanceAt(context.Background(), a1, nil)
 }
