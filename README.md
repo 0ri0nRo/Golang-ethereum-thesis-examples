@@ -13,13 +13,21 @@ This guide provides detailed instructions on how to run a Docker image to simula
 2. **Install Ethereum and Solc:**
     - [This link](https://stackoverflow.com/questions/47257800/error-when-installing-ethereum-package-ethereum-has-no-installation-candidate) contains detailed instructions on how to install Ethereum. Summarizing:
         ```bash
-        sudo apt-get install software-properties-common
-        sudo add-apt-repository -y ppa:ethereum/ethereum
-        sudo apt-get update
-        sudo apt-get install ethereum
+        apt-get install software-properties-common
+        add-apt-repository -y ppa:ethereum/ethereum
+        apt-get update
+        apt-get install ethereum
         ```
-    - Next, install `solc` to compile Solidity contracts.
-
+    - Install `solc` to compile Solidity contracts.
+    - Next install `abigen`:
+     ```bash
+        go install github.com/ethereum/go-ethereum/cmd/abigen@latest
+     ```
+    - Add in your PATH:
+     ```bash
+      export PATH=$PATH:$(go env GOPATH)/bin`
+     ```
+     
 ## Running the Dockerfile from Terminal
 
 Follow these steps if you want to execute the Dockerfile from the terminal:
