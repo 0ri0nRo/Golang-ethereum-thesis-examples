@@ -19,6 +19,15 @@ This guide provides detailed instructions on how to run a Docker image to simula
         apt-get install ethereum
         ```
     - Install `solc` to compile Solidity contracts.
+        ```
+        apt-get update
+        apt-get install -y software-properties-common
+        add-apt-repository -y ppa:ethereum/ethereum
+        apt-get update
+        apt-get install -y solc
+        ```
+
+      
     - Next install `abigen`:
      ```bash
         go install github.com/ethereum/go-ethereum/cmd/abigen@latest
